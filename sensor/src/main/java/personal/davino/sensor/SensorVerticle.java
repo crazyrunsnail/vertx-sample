@@ -22,7 +22,7 @@ public class SensorVerticle extends AbstractVerticle {
 
     PgPool client;
 
-    int httpPort = Integer.valueOf(System.getProperty("http.port", "8080"));
+    int httpPort = Integer.parseInt(System.getProperty("http.port", "8080"));
 
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
@@ -49,9 +49,9 @@ public class SensorVerticle extends AbstractVerticle {
         PgConnectOptions connectOptions = new PgConnectOptions()
                 .setPort(5432)
                 .setHost("127.0.0.1")
-                .setDatabase("sample")
-                .setUser("uniofun")
-                .setPassword("uniofun@123");
+                .setDatabase("test")
+                .setUser("postgres")
+                .setPassword("postgres");
 
         // Pool options
         PoolOptions poolOptions = new PoolOptions()

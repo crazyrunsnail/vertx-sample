@@ -20,7 +20,7 @@ public class Main {
             });*/
 
                 }).onFailure(error -> {
-            log.error("woops", error);
-        });
+                    log.error("woops", error);
+                });
     }
 }
